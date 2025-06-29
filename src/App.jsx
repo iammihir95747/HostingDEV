@@ -1,43 +1,29 @@
-import React from 'react';
-import Navbar from './Components/Home/Navbar';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Home from './Components/Home/Home';
-import Signup from './Components/Auth/Signup';
-
-const AppContent = () => {
-  const location = useLocation();
-  const isSignupPage = location.pathname === '/signup';
-
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
+import Home from './Components/Home/Home'
+import Signup from './Components/Auth/Signup'
+import Navbar from './Components/Home/Navbar'
+import Products from './Pages/Products'
+import Chatbot from './Pages/Chatbot'
+import About from './Masterpages/About'
+  
+function App() {
   return (
-    <div>
-      {isSignupPage ? (
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          alignItems: 'center', 
-          height: '80px',
-        }}>
-          <h1 style={{ margin: 0, color: '#667eea', fontSize: '24px' }}>LOGO</h1>
-        </div>
-      ) : (
-        <Navbar />
-      )}
-      <Routes>
-        <Route path='/' element={<Home />} />
-    
-      </Routes>
-    </div>
-  );
-};
+    <Router>
+      <div className="App">
+        <Toaster position="top-right" />
+          <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/chatbot" element={<Chatbot />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
+  )
+}
 
-const App = () => {
-  return (
-    <div>
-      <Router>
-        <AppContent />
-      </Router>
-    </div>
-  );
-};
-
-export default App;
+export default App
