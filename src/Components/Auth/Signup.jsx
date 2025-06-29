@@ -35,30 +35,30 @@ function Signup() {
     };
 
     return (
-        <div className="flex  justify-center items-center h-screen">
-            <div className="formimage w-1/3 h-fit  hover:cursor-pointer transition-all duration-500 ease-in-out">
-                <div className="flex flex-col justify-center items-center h-full p-8 text-center">
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Welcome to Our Platform</h2>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+        <div className="flex flex-col lg:flex-row justify-center items-center min-h-screen p-4">
+            <div className="hidden lg:block formimage w-full lg:w-1/3 h-fit hover:cursor-pointer transition-all duration-500 ease-in-out mb-8 lg:mb-0">
+                <div className="flex flex-col justify-center items-center h-full p-4 lg:p-8 text-center">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">Welcome to Our Platform</h2>
+                    <p className="text-gray-600 mb-6 leading-relaxed text-sm lg:text-base">
                         Join thousands of users who trust our platform for their daily needs. 
                         Create your account today and unlock exclusive features and benefits.
                     </p>
-                    <div className="space-y-3 text-left">
+                    <div className="space-y-3 text-left w-full max-w-sm">
                         <div className="flex items-center">
-                            <span className="text-green-500 mr-3">✓</span>
-                            <span className="text-gray-700">Secure and reliable authentication</span>
+                            <span className="text-green-500 mr-3 flex-shrink-0">✓</span>
+                            <span className="text-gray-700 text-sm lg:text-base">Secure and reliable authentication</span>
                         </div>
                         <div className="flex items-center">
-                            <span className="text-green-500 mr-3">✓</span>
-                            <span className="text-gray-700">24/7 customer support</span>
+                            <span className="text-green-500 mr-3 flex-shrink-0">✓</span>
+                            <span className="text-gray-700 text-sm lg:text-base">24/7 customer support</span>
                         </div>
                         <div className="flex items-center">
-                            <span className="text-green-500 mr-3">✓</span>
-                            <span className="text-gray-700">Free access to premium features</span>
+                            <span className="text-green-500 mr-3 flex-shrink-0">✓</span>
+                            <span className="text-gray-700 text-sm lg:text-base">Free access to premium features</span>
                         </div>
                         <div className="flex items-center">
-                            <span className="text-green-500 mr-3">✓</span>
-                            <span className="text-gray-700">Easy-to-use interface</span>
+                            <span className="text-green-500 mr-3 flex-shrink-0">✓</span>
+                            <span className="text-gray-700 text-sm lg:text-base">Easy-to-use interface</span>
                         </div>
                     </div>
                 </div>

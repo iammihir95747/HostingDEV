@@ -93,7 +93,7 @@ function Navbar() {
         </button>
 
         {/* Mobile Navigation Links */}
-        <div className={`absolute top-full left-0 w-full md:hidden transition-all duration-500 ease-in-out transform ${
+        <div className={`absolute top-full left-0 w-full md:hidden transition-all duration-200 ease-in-out transform ${
           isMenuOpen 
             ? 'opacity-100 max-h-96 translate-y-0' 
             : 'opacity-0 max-h-0 -translate-y-4 pointer-events-none'
@@ -106,9 +106,15 @@ function Navbar() {
             {/* Mobile Auth Buttons */}
             <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
               <button className='text-black px-4 py-2 rounded-lg text-lg font-semibold transition-colors hover:text-blue-600' 
-              onClick={() => navigate('/login')}>Login</button>
+              onClick={() => {
+                navigate('/login');
+                setIsMenuOpen(false);
+              }}>Login</button>
               <button className='bg-black text-white px-6 py-2 rounded-lg text-lg font-semibold transition-colors hover:bg-gray-800' 
-              onClick={() => navigate('/signup')}>Get Started</button>
+              onClick={() => {
+                navigate('/signup');
+                setIsMenuOpen(false);
+              }}>Get Started</button>
             </div>
           </div>
         </div>
