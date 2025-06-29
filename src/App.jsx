@@ -7,6 +7,7 @@ import Navbar from './Components/Home/Navbar'
 import Products from './Pages/Products'
 import Chatbot from './Pages/Chatbot'
 import About from './Masterpages/About'
+import Footer from './Footer/Footer'  
   
 function App() {
   return (
@@ -22,9 +23,8 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
-    
+      <Footer />  
     </Router>
-
   )
 }
 
